@@ -1,7 +1,3 @@
---Small sign changing script with rainbow colors, updating goals, time, and embedded commands with prefix ">".
---I highly recommend using on 13+ accounts because filtering.
---run this script ONCE YOU CLAIM A STAND!!!!!
-
 -- Gui to Lua
 -- Version: 3.2
 
@@ -323,7 +319,3 @@ while true do
 	args()
 	wait(3)
 end
---Small sign changing script with rainbow colors, updating goals, time, and embedded commands with prefix ">".
---I highly recommend using on 13+ accounts because filtering.
---run this script ONCE YOU CLAIM A STAND!!!!!
---$rainbowsDonate$rainbowe to support this dev     .$newline$goal - $time$newline$rainbowsJoin FunGames Group!$rainbowe
