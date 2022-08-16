@@ -1,8 +1,4 @@
---For people using version one (version didnt exist yet)
-local _continue = true
-pcall(function()if v == nil then _continue = false error("Your qDark Pls Donate GUI is out of date. Please use the updated version: https://raw.githubusercontent.com/Random299Person/roblox-scripts-i-guess/main/plsdonatelauncher.lua") end end,function()_continue = false error("Your qDark Pls Donate GUI is out of date. Please use the updated version: https://raw.githubusercontent.com/Random299Person/roblox-scripts-i-guess/main/plsdonatelauncher.lua")end)
---Version was added in version "1.1".
-if v == "1.1" and _continue then
+if v == "1.1" then
 	-- Gui to Lua
 	-- Version: 3.2
 
@@ -44,7 +40,7 @@ if v == "1.1" and _continue then
 	Entry.Font = Enum.Font.GothamBlack
 	Entry.PlaceholderColor3 = Color3.fromRGB(127, 127, 127)
 	Entry.PlaceholderText = "Input text here"
-	Entry.Text = ""
+	Entry.Text = text
 	Entry.TextColor3 = Color3.fromRGB(0, 0, 0)
 	Entry.TextScaled = true
 	Entry.TextSize = 14.000
@@ -145,7 +141,6 @@ if v == "1.1" and _continue then
 	DonationMessages.TextStrokeTransparency = 0.000
 	DonationMessages.TextWrapped = true
 
-	Entry.Text = text
 	local open = false
 	local topdonor,tda = nil,0
 
@@ -256,10 +251,29 @@ if v == "1.1" and _continue then
 			if Raised.Value >= goal then
 				goaltxt = "Goal reached!"
 			end
-			local uhh = string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(text, "$rainbowc", color), "$topdonor", topdonor), "$goal", goaltxt), "$time", getTime()), "$rainbows", '<font color="' .. color .. '">'), "$rainbowe", "</font>")
-			if #uhh > moneypoop() then
+			local uhh = string.gsub(
+				string.gsub(
+					string.gsub(
+						string.gsub(
+							string.gsub(
+								string.gsub(
+									text,
+									"$rainbowc",
+									color),
+								"$topdonor",
+								topdonor),
+							"$goal",
+							goaltxt),
+						"$time",
+						getTime()),
+					"$rainbows",
+					'<font color="' .. color .. '">'),
+				"$rainbowe",
+				"</font>")
+			local HERECOMESTHEMONAYYYYYYYY = moneypoop()
+			if #uhh > HERECOMESTHEMONAYYYYYYYY then
 				Display.Text = uhh .. [[
-	{qDark}: Booth text exceeded. ]] .. #uhh .. [[ characters max is ]] .. moneypoop() .. [[.]]
+	{qDark}: Booth text exceeded. ]] .. #uhh .. [[ characters max is ]] .. HERECOMESTHEMONAYYYYYYYY .. [[.]]
 			else
 				setRemi:FireServer(uhh, "booth")
 				Display.Text = uhh
@@ -303,6 +317,6 @@ if v == "1.1" and _continue then
 	--Small sign changing script with rainbow colors, updating goals, time, and embedded commands with prefix ">".
 	--I highly recommend using on 13+ accounts because filtering.
 	--run this script ONCE YOU CLAIM A STAND!!!!!
-elseif _continue then
+else
 	error("Your qDark Pls Donate GUI is out of date. Please use the updated version: https://raw.githubusercontent.com/Random299Person/roblox-scripts-i-guess/main/plsdonatelauncher.lua")
 end
