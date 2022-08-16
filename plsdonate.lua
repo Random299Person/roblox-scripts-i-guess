@@ -142,7 +142,7 @@ if v == "1.1" then
 	DonationMessages.TextWrapped = true
 
 	local open = false
-	local topdonor,tda = nil,0
+	local topdonor,tda = "",0
 
 	Toggle.MouseButton1Click:Connect(function()
 		open = not open
