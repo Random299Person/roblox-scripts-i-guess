@@ -15,7 +15,7 @@ loadstring([[
 
 --NOTE YOU CAN ALSO USE /e COMMAND OR /emote COMMAND FOR HIDING
 --<goal> change to what you want the goal in robux is. also works with >goal NUMBER
-local goal = 2250
+local goal = 400
 
 --<text> change to what you want the text to be. also works with >text STRING.
 --\n = new line
@@ -26,7 +26,7 @@ local goal = 2250
 --$rainbowe = </font>
 --$rainbowc = <rainbow color>
 --$topdonor = Nobody or the top donor since you joined
-local text = '<font size="21" face="Arcade" color="$rainbowc">GAME DEV</font>$newline$goal - $time'
+local text = '$rainbowsSign Script Loaded!$rainbowe'
 
 --<messages> you can set the messages for when people donate.
 -->setmessage INDEX MESSAGE = messages[INDEX] = message
