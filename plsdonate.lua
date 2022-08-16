@@ -59,6 +59,7 @@ $rainbows = <font color=\"<rainbow color>\">
 $rainbowe = </font>
 $newline = creates a new line.
 $topdonor = returns either Nobody or the top donor since you joined.
+$rainbowc = \"<rainbow color>\"
 Below is how it appears.]]
 Hint.TextColor3 = Color3.fromRGB(0, 0, 0)
 Hint.TextScaled = true
@@ -139,34 +140,9 @@ DonationMessages.TextSize = 14.000
 DonationMessages.TextStrokeTransparency = 0.000
 DonationMessages.TextWrapped = true
 
---NOTE YOU CAN ALSO USE /e COMMAND OR /emote COMMAND FOR HIDING
---<goal> change to what you want the goal in robux is. also works with >goal NUMBER
-local goal = 600
---<text> change to what you want the text to be. also works with >text STRING.
---\n = new line
---/n = does the same thing just used in the embedded commands.
---$goal = Goal: <goal - raised> R$ left! or if its already reached, Goal reached!
---$time = <time> minutes
---$rainbows = <font color="<rainbow color>">
---$rainbowe = </font>
---$topdonor = Nobody or the top donor since you joineed
-local text = '$rainbowsSign script loaded!$rainbowe'
 Entry.Text = text
---<messages> you can set the messages for when people donate.
--->setmessage INDEX MESSAGE = messages[INDEX] = message
--->clearmessage INDEX = messages[INDEX] = nil
--->clearmessages = messages = {}
-local messages = {"Thanks for the donation, $user!"; "$user, you're amazing!"; "Thanks for the $ammount tip, $user!"}
---<isrunning> Self-explanitory init?
---toggle on with >run
---toggle off with >stop
-local isrunning = true
---<messagesAUTO> Sends messages when someone doanates to you.
---toggle on with >mrun
---toggle off with >mstop
-local messagesAUTO = true
 local open = false
-local topdonor,tda = "camqu9",744
+local topdonor,tda = nil,0
 
 Toggle.MouseButton1Click:Connect(function()
 	open = not open
@@ -275,7 +251,7 @@ function args()
 		if Raised.Value >= goal then
 			goaltxt = "Goal reached!"
 		end
-		local uhh = string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(text, "$topdonor", topdonor), "$goal", goaltxt), "$time", getTime()), "$rainbows", '<font color="' .. color .. '">'), "$rainbowe", "</font>")
+		local uhh = string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(text, "$rainbowc", color), "$topdonor", topdonor), "$goal", goaltxt), "$time", getTime()), "$rainbows", '<font color="' .. color .. '">'), "$rainbowe", "</font>")
 		if #uhh > moneypoop() then
 			Display.Text = uhh .. [[
 {qDark}: Booth text exceeded. ]] .. #uhh .. [[ characters max is ]] .. moneypoop() .. [[.]]
@@ -319,3 +295,6 @@ while true do
 	args()
 	wait(3)
 end
+--Small sign changing script with rainbow colors, updating goals, time, and embedded commands with prefix ">".
+--I highly recommend using on 13+ accounts because filtering.
+--run this script ONCE YOU CLAIM A STAND!!!!!
