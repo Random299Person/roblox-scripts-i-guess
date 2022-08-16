@@ -243,7 +243,7 @@ if v == "1.1" then
 		return 250
 	end
 
-	local color = "#ff0000"
+	local _color = "#ff0000"
 	function args()
 		if isrunning then
 			local setRemi = remotes.Event("SetBoothText")
