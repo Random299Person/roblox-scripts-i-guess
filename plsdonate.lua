@@ -259,7 +259,7 @@ if v == "1.1" then
 								string.gsub(
 									text,
 									"$rainbowc",
-									color),
+									_color),
 								"$topdonor",
 								topdonor),
 							"$goal",
@@ -267,7 +267,7 @@ if v == "1.1" then
 						"$time",
 						getTime()),
 					"$rainbows",
-					'<font color="' .. color .. '">'),
+					'<font color="' .. _color .. '">'),
 				"$rainbowe",
 				"</font>")
 			local HERECOMESTHEMONAYYYYYYYY = moneypoop()
@@ -295,22 +295,22 @@ if v == "1.1" then
 	end);
 
 	while true do
-		color = "#ff0000"
+		_color = "#ff0000"
 		args()
 		wait(3)
-		color = "#ffff00"
+		_color = "#ffff00"
 		args()
 		wait(3)
-		color = "#00ff00"
+		_color = "#00ff00"
 		args()
 		wait(3)
-		color = "#00ffff"
+		_color = "#00ffff"
 		args()
 		wait(3)
-		color = "#0000ff"
+		_color = "#0000ff"
 		args()
 		wait(3)
-		color = "#ff00ff"
+		_color = "#ff00ff"
 		args()
 		wait(3)
 	end
