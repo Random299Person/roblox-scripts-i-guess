@@ -280,7 +280,9 @@ if v == "1.1" then
 			end
 		end
 	end
-	Set.MouseButton1Click:Connect(args)
+	Set.MouseButton1Click:Connect(function()
+		args()
+	end)
 
 	--Raised:GetPropertyChangedSignal("Value"):Connect(function()
 
