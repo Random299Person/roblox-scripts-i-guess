@@ -1,4 +1,4 @@
-if v == "1.1" then
+if v == "1.2" then
 	-- Gui to Lua
 	-- Version: 3.2
 
@@ -244,8 +244,8 @@ if v == "1.1" then
 	end
 
 	local _color = "#ff0000"
-	function args()
-		if isrunning then
+	function args(force)
+		if isrunning or force == true then
 			local setRemi = remotes.Event("SetBoothText")
 			local goaltxt = "Goal: " .. tostring(goal - Raised.Value) .. " R$ left!"
 			if Raised.Value >= goal then
@@ -281,7 +281,7 @@ if v == "1.1" then
 		end
 	end
 	Set.MouseButton1Click:Connect(function()
-		args()
+		args(true)
 	end)
 
 	--Raised:GetPropertyChangedSignal("Value"):Connect(function()
@@ -320,5 +320,11 @@ if v == "1.1" then
 	--I highly recommend using on 13+ accounts because filtering.
 	--run this script ONCE YOU CLAIM A STAND!!!!!
 else
-	error("Your qDark Pls Donate GUI is out of date. Please use the updated version: https://raw.githubusercontent.com/Random299Person/roblox-scripts-i-guess/main/plsdonatelauncher.lua")
+	game.StarterGui:SetCore("ChatMakeSystemMessage", {
+		Text = "Your qDark Pls Donate GUI is out of date. Please use the updated version: https://raw.githubusercontent.com/Random299Person/roblox-scripts-i-guess/main/plsdonatelauncher.lua, the link has been copied to your clipboard to make it easier";
+		Color = Color3.fromRGB(255, 255, 255);
+		Font = Enum.Font.GothamBold;
+		TextSize = 9
+	});
+	setclipboard("https://raw.githubusercontent.com/Random299Person/roblox-scripts-i-guess/main/plsdonatelauncher.lua")
 end
