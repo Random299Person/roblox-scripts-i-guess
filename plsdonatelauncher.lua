@@ -44,4 +44,4 @@ local isrunning = true
 --toggle off with >mstop
 local messagesAUTO = true
 
-local v="1.1"]] .. game:HttpGet("https://raw.githubusercontent.com/Random299Person/roblox-scripts-i-guess/main/plsdonate.lua"))()
+local v="1.2"]] .. game:HttpGet("https://raw.githubusercontent.com/Random299Person/roblox-scripts-i-guess/main/plsdonate.lua"))()
