@@ -1,0 +1,1016 @@
+local code = "--Compiled using SIMPLE GUI COMPILER"
+function addLine(line)
+	code ..= "\n" .. line
+end
+addLine("--SIMPLE GUI CONVERTER BY R_299P")
+local api = {
+	--Basic UI
+	["ScreenGui"] = {
+
+		--Data
+		Archivable = true;
+		DisplayOrder = 0;
+		Enabled = true;
+		IgnoreGuiInset = true;
+		Name = "ScreenGui";
+		Parent = "nil";
+		ResetOnSpawn = true;
+		ZIndexBehavior = Enum.ZIndexBehavior.Global;
+
+		--Localization
+		AutoLocalize = true;
+		RootLocalizationTable = "nil";
+
+		--Selection
+		SelectionGroup = false;
+		SelectionBehaviorDown = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorLeft = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorRight = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorUp = Enum.SelectionBehavior.Escape;
+	};
+	["Frame"] = {
+
+		--Appearance
+		SelectionImageObject = "nil";
+
+		--Data
+		Archivable = true;
+		Active = false;
+		AnchorPoint = Vector2.zero;
+		AutomaticSize = Enum.AutomaticSize.None;
+		BackgroundColor3 = Color3.fromRGB(163, 162, 165);
+		BackgroundTransparency = 0;
+		BorderColor3 = Color3.fromRGB(27, 42, 53);
+		BorderMode = Enum.BorderMode.Outline;
+		BorderSizePixel = 1;
+		LayoutOrder = 0;
+		Name = "Frame";
+		Parent = "nil";
+		Position = UDim2.new(0, 0, 0, 0);
+		Rotation = 0;
+		Size = UDim2.new(0, 0, 0, 0);
+		SizeConstraint = Enum.SizeConstraint.RelativeXY;
+		Style = Enum.FrameStyle.Custom;
+		Visible = true;
+		ZIndex = 1;
+
+		--Behavior
+		ClipsDescendants = false;
+
+		--Localization
+		AutoLocalize = true;
+		RootLocalizationTable = "nil";
+
+		--Selection
+		NextSelectionDown = "nil";
+		NextSelectionLeft = "nil";
+		NextSelectionRight = "nil";
+		NextSelectionUp = "nil";
+		Selectable = false;
+		SelectionGroup = false;
+		SelectionBehaviorDown = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorLeft = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorRight = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorUp = Enum.SelectionBehavior.Escape;
+		SelectionOrder = 0;
+	};
+	["ScrollingFrame"] = {
+
+		--Appearance
+		SelectionImageObject = "nil";
+
+		--Data
+		Archivable = true;
+		Active = false;
+		AnchorPoint = Vector2.zero;
+		AutomaticSize = Enum.AutomaticSize.None;
+		BackgroundColor3 = Color3.fromRGB(163, 162, 165);
+		BackgroundTransparency = 0;
+		BorderColor3 = Color3.fromRGB(27, 42, 53);
+		BorderMode = Enum.BorderMode.Outline;
+		BorderSizePixel = 1;
+		LayoutOrder = 0;
+		Name = "ScrollingFrame";
+		Parent = "nil";
+		Position = UDim2.new(0, 0, 0, 0);
+		Rotation = 0;
+		Size = UDim2.new(0, 0, 0, 0);
+		SizeConstraint = Enum.SizeConstraint.RelativeXY;
+		Visible = true;
+		ZIndex = 1;
+
+		--Behavior
+		ClipsDescendants = false;
+
+		--Localization
+		AutoLocalize = true;
+		RootLocalizationTable = "nil";
+
+		--Scrolling
+		AutomaticCanvasSize = Enum.AutomaticSize.None;
+		BottomImage = "rbxasset://textures/ui/Scroll/scroll-bottom.png";
+		CanvasPosition = Vector2.zero;
+		CanvasSize = UDim2.new(0, 0, 2, 0);
+		ElasticBehavior = Enum.ElasticBehavior.WhenScrollable;
+		HorizontalScrollBarInset = Enum.ScrollBarInset.None;
+		MidImage = "rbxasset://textures/ui/Scroll/scroll-middle.png";
+		ScrollBarImageColor3 = Color3.new(1, 1, 1);
+		ScrollBarImageTransparency = 0;
+		ScrollBarThickness = 12;
+		ScrollingDirection = Enum.ScrollingDirection.XY;
+		ScrollingEnabled = true;
+		TopImage = "rbxasset://textures/ui/Scroll/scroll-top.png";
+		VerticalScrollBarInset = Enum.ScrollBarInset.None;
+		VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Right;
+
+		--Selection
+		NextSelectionDown = "nil";
+		NextSelectionLeft = "nil";
+		NextSelectionRight = "nil";
+		NextSelectionUp = "nil";
+		Selectable = false;
+		SelectionGroup = false;
+		SelectionBehaviorDown = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorLeft = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorRight = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorUp = Enum.SelectionBehavior.Escape;
+		SelectionOrder = 0;
+	};
+	["TextLabel"] = {
+
+		--Appearance
+		SelectionImageObject = "nil";
+
+		--Data
+		Archivable = true;
+		Active = false;
+		AnchorPoint = Vector2.zero;
+		AutomaticSize = Enum.AutomaticSize.None;
+		BackgroundColor3 = Color3.fromRGB(163, 162, 165);
+		BackgroundTransparency = 0;
+		BorderColor3 = Color3.fromRGB(27, 42, 53);
+		BorderMode = Enum.BorderMode.Outline;
+		BorderSizePixel = 1;
+		LayoutOrder = 0;
+		Name = "TextLabel";
+		Parent = "nil";
+		Position = UDim2.new(0, 0, 0, 0);
+		Rotation = 0;
+		Size = UDim2.new(0, 0, 0, 0);
+		SizeConstraint = Enum.SizeConstraint.RelativeXY;
+		Visible = true;
+		ZIndex = 1;
+
+		--Behavior
+		ClipsDescendants = false;
+
+		--Localization
+		AutoLocalize = true;
+		RootLocalizationTable = "nil";
+
+		--Selection
+		NextSelectionDown = "nil";
+		NextSelectionLeft = "nil";
+		NextSelectionRight = "nil";
+		NextSelectionUp = "nil";
+		Selectable = false;
+		SelectionGroup = false;
+		SelectionBehaviorDown = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorLeft = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorRight = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorUp = Enum.SelectionBehavior.Escape;
+		SelectionOrder = 0;
+
+		--Text
+		FontFace = Font.new("Arial (Legacy)", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+		LineHeight = 1;
+		MaxVisibleGraphemes = -1;
+		RichText = false;
+		Text = "Label";
+		TextColor3 = Color3.fromRGB(27, 42, 53);
+		TextScaled = false;
+		TextSize = 8;
+		TextStrokeColor3 = Color3.new(0, 0, 0);
+		TextStrokeTransparency = 1;
+		TextTransparency = 0;
+		TextTruncate = Enum.TextTruncate.None;
+		TextWrapped = false;
+		TextXAlignment = Enum.TextXAlignment.Center;
+		TextYAlignment = Enum.TextYAlignment.Center;
+	};
+	["TextButton"] = {
+
+		--Appearance
+		SelectionImageObject = "nil";
+
+		--Data
+		Archivable = true;
+		Active = false;
+		AnchorPoint = Vector2.zero;
+		AutoButtonColor = true;
+		AutomaticSize = Enum.AutomaticSize.None;
+		BackgroundColor3 = Color3.fromRGB(163, 162, 165);
+		BackgroundTransparency = 0;
+		BorderColor3 = Color3.fromRGB(27, 42, 53);
+		BorderMode = Enum.BorderMode.Outline;
+		BorderSizePixel = 1;
+		LayoutOrder = 0;
+		Modal = false;
+		Name = "TextButton";
+		Parent = "nil";
+		Position = UDim2.new(0, 0, 0, 0);
+		Rotation = 0;
+		Size = UDim2.new(0, 0, 0, 0);
+		SizeConstraint = Enum.SizeConstraint.RelativeXY;
+		Visible = true;
+		ZIndex = 1;
+
+		--Behavior
+		ClipsDescendants = false;
+
+		--Localization
+		AutoLocalize = true;
+		RootLocalizationTable = "nil";
+
+		--Selection
+		NextSelectionDown = "nil";
+		NextSelectionLeft = "nil";
+		NextSelectionRight = "nil";
+		NextSelectionUp = "nil";
+		Selectable = true;
+		Selected = false;
+		SelectionGroup = false;
+		SelectionBehaviorDown = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorLeft = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorRight = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorUp = Enum.SelectionBehavior.Escape;
+		SelectionOrder = 0;
+
+		--Text
+		FontFace = Font.new("Arial (Legacy)", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+		LineHeight = 1;
+		MaxVisibleGraphemes = -1;
+		RichText = false;
+		Text = "Label";
+		TextColor3 = Color3.fromRGB(27, 42, 53);
+		TextScaled = false;
+		TextSize = 8;
+		TextStrokeColor3 = Color3.new(0, 0, 0);
+		TextStrokeTransparency = 1;
+		TextTransparency = 0;
+		TextTruncate = Enum.TextTruncate.None;
+		TextWrapped = false;
+		TextXAlignment = Enum.TextXAlignment.Center;
+		TextYAlignment = Enum.TextYAlignment.Center;
+	};
+	["TextBox"] = {
+
+		--Appearance
+		SelectionImageObject = "nil";
+
+		--Data
+		Archivable = true;
+		Active = false;
+		AnchorPoint = Vector2.zero;
+		AutomaticSize = Enum.AutomaticSize.None;
+		BackgroundColor3 = Color3.fromRGB(163, 162, 165);
+		BackgroundTransparency = 0;
+		BorderColor3 = Color3.fromRGB(27, 42, 53);
+		BorderMode = Enum.BorderMode.Outline;
+		BorderSizePixel = 1;
+		ClearTextOnFocus = true;
+		CursorPosition = 1;
+		LayoutOrder = 0;
+		MultiLine = false;
+		Name = "TextLabel";
+		Parent = "nil";
+		Position = UDim2.new(0, 0, 0, 0);
+		Rotation = 0;
+		SelectionStart = -1;
+		ShowNativeInput = true;
+		Size = UDim2.new(0, 0, 0, 0);
+		SizeConstraint = Enum.SizeConstraint.RelativeXY;
+		TextEditable = true;
+		Visible = true;
+		ZIndex = 1;
+
+		--Behavior
+		ClipsDescendants = false;
+
+		--Localization
+		AutoLocalize = true;
+		RootLocalizationTable = "nil";
+
+		--Selection
+		NextSelectionDown = "nil";
+		NextSelectionLeft = "nil";
+		NextSelectionRight = "nil";
+		NextSelectionUp = "nil";
+		Selectable = true;
+		SelectionGroup = false;
+		SelectionBehaviorDown = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorLeft = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorRight = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorUp = Enum.SelectionBehavior.Escape;
+		SelectionOrder = 0;
+
+		--Text
+		FontFace = Font.new("Arial (Legacy)", Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+		LineHeight = 1;
+		MaxVisibleGraphemes = -1;
+		PlaceholderColor3 = Color3.fromRGB(178, 178, 178);
+		PlaceholderText = "";
+		RichText = false;
+		Text = "TextBox";
+		TextColor3 = Color3.fromRGB(27, 42, 53);
+		TextScaled = false;
+		TextSize = 8;
+		TextStrokeColor3 = Color3.new(0, 0, 0);
+		TextStrokeTransparency = 1;
+		TextTransparency = 0;
+		TextTruncate = Enum.TextTruncate.None;
+		TextWrapped = false;
+		TextXAlignment = Enum.TextXAlignment.Center;
+		TextYAlignment = Enum.TextYAlignment.Center;
+	};
+	["ImageButton"] = {
+
+		--Appearance
+		SelectionImageObject = "nil";
+
+		--Data
+		Archivable = true;
+		Active = false;
+		AnchorPoint = Vector2.zero;
+		AutoButtonColor = true;
+		AutomaticSize = Enum.AutomaticSize.None;
+		BackgroundColor3 = Color3.fromRGB(163, 162, 165);
+		BackgroundTransparency = 0;
+		BorderColor3 = Color3.fromRGB(27, 42, 53);
+		BorderMode = Enum.BorderMode.Outline;
+		BorderSizePixel = 1;
+		LayoutOrder = 0;
+		Modal = false;
+		Name = "TextButton";
+		Parent = "nil";
+		Position = UDim2.new(0, 0, 0, 0);
+		Rotation = 0;
+		Size = UDim2.new(0, 0, 0, 0);
+		SizeConstraint = Enum.SizeConstraint.RelativeXY;
+		Visible = true;
+		ZIndex = 1;
+
+		--Behavior
+		ClipsDescendants = false;
+
+		--Image
+		HoverImage = "";
+		Image = "";
+		ImageColor3 = Color3.new(1, 1, 1);
+		ImageRectOffset = Vector2.zero;
+		ImageRectSize = Vector2.zero;
+		ImageTransparency = 0;
+		PressedImage = "";
+		ResampleMode = Enum.ResamplerMode.Default;
+		ScaleType = Enum.ScaleType.Stretch;
+		SliceCenter = Rect.new();
+		SliceScale = 1;
+		TileSize = UDim2.new(1, 0, 1, 0);
+
+		--Localization
+		AutoLocalize = true;
+		RootLocalizationTable = "nil";
+
+		--Selection
+		NextSelectionDown = "nil";
+		NextSelectionLeft = "nil";
+		NextSelectionRight = "nil";
+		NextSelectionUp = "nil";
+		Selectable = true;
+		Selected = false;
+		SelectionGroup = false;
+		SelectionBehaviorDown = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorLeft = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorRight = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorUp = Enum.SelectionBehavior.Escape;
+		SelectionOrder = 0;
+	};
+	["ImageLabel"] = {
+
+		--Appearance
+		SelectionImageObject = "nil";
+
+		--Data
+		Archivable = true;
+		Active = false;
+		AnchorPoint = Vector2.zero;
+		AutomaticSize = Enum.AutomaticSize.None;
+		BackgroundColor3 = Color3.fromRGB(163, 162, 165);
+		BackgroundTransparency = 0;
+		BorderColor3 = Color3.fromRGB(27, 42, 53);
+		BorderMode = Enum.BorderMode.Outline;
+		BorderSizePixel = 1;
+		LayoutOrder = 0;
+		Name = "TextLabel";
+		Parent = "nil";
+		Position = UDim2.new(0, 0, 0, 0);
+		Rotation = 0;
+		Size = UDim2.new(0, 0, 0, 0);
+		SizeConstraint = Enum.SizeConstraint.RelativeXY;
+		Visible = true;
+		ZIndex = 1;
+
+		--Behavior
+		ClipsDescendants = false;
+
+		--Image
+		Image = "";
+		ImageColor3 = Color3.new(1, 1, 1);
+		ImageRectOffset = Vector2.zero;
+		ImageRectSize = Vector2.zero;
+		ImageTransparency = 0;
+		ResampleMode = Enum.ResamplerMode.Default;
+		ScaleType = Enum.ScaleType.Stretch;
+		SliceCenter = Rect.new();
+		SliceScale = 1;
+		TileSize = UDim2.new(1, 0, 1, 0);
+
+		--Localization
+		AutoLocalize = true;
+		RootLocalizationTable = "nil";
+
+		--Selection
+		NextSelectionDown = "nil";
+		NextSelectionLeft = "nil";
+		NextSelectionRight = "nil";
+		NextSelectionUp = "nil";
+		Selectable = false;
+		SelectionGroup = false;
+		SelectionBehaviorDown = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorLeft = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorRight = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorUp = Enum.SelectionBehavior.Escape;
+		SelectionOrder = 0;
+	};
+
+	--Extra UI
+	["LocalizationTable"] = {
+
+		--Data
+		Archivable = true;
+		Name = "LocalizationTable";
+		Parent = "nil";
+
+		--Localization
+		SourceLocaleId = "en-us"
+	};
+	["CanvasGroup"] = {
+
+		--Appearance
+		GroupColor3 = Color3.new(1, 1, 1);
+		GroupTransparency = 0;
+		SelectionImageObject = "nil";
+
+		--Data
+		Archivable = true;
+		Active = false;
+		AnchorPoint = Vector2.zero;
+		AutomaticSize = Enum.AutomaticSize.None;
+		BackgroundColor3 = Color3.fromRGB(163, 162, 165);
+		BackgroundTransparency = 0;
+		BorderColor3 = Color3.fromRGB(27, 42, 53);
+		BorderMode = Enum.BorderMode.Outline;
+		BorderSizePixel = 1;
+		LayoutOrder = 0;
+		Name = "Frame";
+		Parent = "nil";
+		Position = UDim2.new(0, 0, 0, 0);
+		Rotation = 0;
+		Size = UDim2.new(0, 0, 0, 0);
+		SizeConstraint = Enum.SizeConstraint.RelativeXY;
+		Style = Enum.FrameStyle.Custom;
+		Visible = true;
+		ZIndex = 1;
+
+		--Behavior
+		ClipsDescendants = false;
+
+		--Localization
+		AutoLocalize = true;
+		RootLocalizationTable = "nil";
+
+		--Selection
+		NextSelectionDown = "nil";
+		NextSelectionLeft = "nil";
+		NextSelectionRight = "nil";
+		NextSelectionUp = "nil";
+		Selectable = false;
+		SelectionGroup = false;
+		SelectionBehaviorDown = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorLeft = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorRight = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorUp = Enum.SelectionBehavior.Escape;
+		SelectionOrder = 0;
+	};
+	["UIAspectRatioConstraint"] = {
+
+		--Data
+		Archivable = true;
+		Name = "UIAspectRatioConstraint";
+		Parent = "nil";
+
+		--Behavior
+		AspectRatio = 1;
+		AspectType = Enum.AspectType.FitWithinMaxSize;
+		DominantAxis = Enum.DominantAxis.Width;
+	};
+	["UICorner"] = {
+
+		--Appearance
+		CornerRadius = UDim.new(0, 8);
+
+		--Data
+		Archivable = true;
+		Name = "UICorner";
+		Parent = "nil";
+	};
+	["UIGradient"] = {
+
+		--Appearance
+		Color = ColorSequence.new(Color3.new(1, 1, 1));
+		Enabled = true;
+		Offset = Vector2.zero;
+		Rotation = 0;
+		Transparency = 0;
+
+		--Data
+		Archivable = true;
+		Name = "UIGradient";
+		Parent = "nil";
+	};
+	["UIGridLayout"] = {
+
+		--Appearance
+		CellPadding = UDim2.new(0, 5, 0, 5);
+		CellSize = UDim2.new(0, 100, 0, 100);
+
+		--Data
+		Archivable = true;
+		Name = "UIGridLayout";
+		Parent = "nil";
+
+		--Behavior
+		FillDirection = Enum.FillDirection.Horizontal;
+		FillDirectionMaxCells = 0;
+		HorizontalAlignment = Enum.HorizontalAlignment.Left;
+		SortOrder = Enum.SortOrder.Name;
+		StartCorner = Enum.StartCorner.TopLeft;
+		VerticalAlignment = Enum.VerticalAlignment.Top;
+	};
+	["UIListLayout"] = {
+
+		--Appearance
+		Padding = UDim.new(0, 8);
+
+		--Data
+		Archivable = true;
+		Name = "UIListLayout";
+		Parent = "nil";
+
+		--Behavior
+		FillDirection = Enum.FillDirection.Vertical;
+		HorizontalAlignment = Enum.HorizontalAlignment.Left;
+		SortOrder = Enum.SortOrder.Name;
+		VerticalAlignment = Enum.VerticalAlignment.Top;
+	};
+	["UIPadding"] = {
+
+		--Data
+		Archivable = true;
+		Name = "UIPadding";
+		Parent = "nil";
+
+		--Behavior
+		PaddingBottom = UDim.new(0, 0);
+		PaddingLeft = UDim.new(0, 0);
+		PaddingRight = UDim.new(0, 0);
+		PaddingTop = UDim.new(0, 0);
+	};
+	["UIPageLayout"] = {
+
+		--Appearance
+		Animated = true;
+		Circular = false;
+		EasingDirection = Enum.EasingDirection.Out;
+		EasingStyle = Enum.EasingStyle.Back;
+		Padding = UDim.new(0, 0);
+		TweenTime = 1;
+
+		--Data
+		Archivable = true;
+		Name = "UIPageLayout";
+		Parent = "nil";
+
+		--Behavior
+		FillDirection = Enum.FillDirection.Horizontal;
+		HorizontalAlignment = Enum.HorizontalAlignment.Left;
+		SortOrder = Enum.SortOrder.Name;
+		VerticalAlignment = Enum.VerticalAlignment.Top;
+
+		--Input
+		GamepadInputEnabled = true;
+		ScrollWheelInputEnabled = true;
+		TouchInputEnabled = true;
+	};
+	["UIScale"] = {
+
+		--Data
+		Archivable = true;
+		Name = "UIScale";
+		Parent = "nil";
+
+		--Behavior
+		Scale = 1;
+	};
+	["UISizeConstraint"] = {
+
+		--Data
+		Archivable = true;
+		Name = "UISizeConstraint";
+		Parent = "nil";
+
+		--Behavior
+		MaxSize = Vector2.new(math.huge, math.huge);
+		MinSize = Vector2.new(0, 0);
+	};
+	["UIStroke"] = {
+
+		--Appearance
+		ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual;
+		Color = Color3.new(0, 0, 0);
+		LineJoinMode = Enum.LineJoinMode.Round;
+		Thickness = 1;
+		Transparency = 0;
+
+		--Data
+		Archivable = true;
+		Enabled = true;
+		Name = "UIStroke";
+		Parent = "nil";
+	};
+	["UITableLayout"] = {
+
+		--Appearance
+		FillEmptySpaceColumns = false;
+		FillEmptySpaceRows = false;
+		Padding = UDim2.new(0, 0, 0, 0);
+
+		--Data
+		Archivable = true;
+		Name = "UITableLayout";
+		Parent = "nil";
+
+		--Behavior
+		FillDirection = Enum.FillDirection.Vertical;
+		HorizontalAlignment = Enum.HorizontalAlignment.Left;
+		MajorAxis = Enum.TableMajorAxis.RowMajor;
+		SortOrder = Enum.SortOrder.Name;
+		VerticalAlignment = Enum.VerticalAlignment.Top;
+	};
+	["UITextSizeConstraint"] = {
+
+		--Data
+		Archivable = true;
+		Name = "UITextSizeConstraint";
+		Parent = "nil";
+
+		--Behavior
+		MaxTextSize = 100;
+		MinTextSize = 1;
+	};
+	["VideoFrame"] = {
+
+		--Appearance
+		SelectionImageObject = "nil";
+
+		--Data
+		Archivable = true;
+		Active = false;
+		AnchorPoint = Vector2.zero;
+		AutomaticSize = Enum.AutomaticSize.None;
+		BackgroundColor3 = Color3.fromRGB(163, 162, 165);
+		BackgroundTransparency = 0;
+		BorderColor3 = Color3.fromRGB(27, 42, 53);
+		BorderMode = Enum.BorderMode.Outline;
+		BorderSizePixel = 1;
+		LayoutOrder = 0;
+		Name = "VideoFrame";
+		Parent = "nil";
+		Position = UDim2.new(0, 0, 0, 0);
+		Rotation = 0;
+		Size = UDim2.new(0, 0, 0, 0);
+		SizeConstraint = Enum.SizeConstraint.RelativeXY;
+		Style = Enum.FrameStyle.Custom;
+		Visible = true;
+		ZIndex = 1;
+
+		--Behavior
+		ClipsDescendants = false;
+
+		--Localization
+		AutoLocalize = true;
+		RootLocalizationTable = "nil";
+
+		--Selection
+		NextSelectionDown = "nil";
+		NextSelectionLeft = "nil";
+		NextSelectionRight = "nil";
+		NextSelectionUp = "nil";
+		Selectable = false;
+		SelectionGroup = false;
+		SelectionBehaviorDown = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorLeft = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorRight = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorUp = Enum.SelectionBehavior.Escape;
+		SelectionOrder = 0;
+
+		--Video
+		Looped = false;
+		Playing = false;
+		TimePosition = 0;
+		Video = "";
+		Volume = 1;
+	};
+	["ViewportFrame"] = {
+
+		--Appearance
+		Ambient = Color3.fromRGB(200, 200, 200);
+		LightColor = Color3.fromRGB(140, 140, 140);
+		LightDirection = Vector3.one * -1;
+		SelectionImageObject = "nil";
+
+		--Data
+		Archivable = true;
+		Active = false;
+		AnchorPoint = Vector2.zero;
+		AutomaticSize = Enum.AutomaticSize.None;
+		BackgroundColor3 = Color3.fromRGB(163, 162, 165);
+		BackgroundTransparency = 0;
+		BorderColor3 = Color3.fromRGB(27, 42, 53);
+		BorderMode = Enum.BorderMode.Outline;
+		BorderSizePixel = 1;
+		LayoutOrder = 0;
+		Name = "ViewportFrame";
+		Parent = "nil";
+		Position = UDim2.new(0, 0, 0, 0);
+		Rotation = 0;
+		Size = UDim2.new(0, 0, 0, 0);
+		SizeConstraint = Enum.SizeConstraint.RelativeXY;
+		Style = Enum.FrameStyle.Custom;
+		Visible = true;
+		ZIndex = 1;
+
+		--Behavior
+		ClipsDescendants = false;
+
+		--Image
+		ImageColor3 = Color3.new(1, 1, 1);
+		ImageTransparency = 0;
+
+		--Localization
+		AutoLocalize = true;
+		RootLocalizationTable = "nil";
+
+		--Selection
+		NextSelectionDown = "nil";
+		NextSelectionLeft = "nil";
+		NextSelectionRight = "nil";
+		NextSelectionUp = "nil";
+		Selectable = false;
+		SelectionGroup = false;
+		SelectionBehaviorDown = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorLeft = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorRight = Enum.SelectionBehavior.Escape;
+		SelectionBehaviorUp = Enum.SelectionBehavior.Escape;
+		SelectionOrder = 0;
+
+		--Video
+		Looped = false;
+		Playing = false;
+		TimePosition = 0;
+		Video = "";
+		Volume = 1;
+	};
+
+	--Non UI
+	["Sound"] = {
+
+		--Data
+		Archivable = true;
+		Name = "Sound";
+		Parent = "nil";
+
+		--Behavior
+		PlayOnRemove = false;
+
+		--Asset
+		SoundId = "";
+
+		--Emiiter
+		RollOffMaxDistance = 10000;
+		RollOffMinDistance = 10;
+		RollOffMode = Enum.RollOffMode.Inverse;
+
+		--Playback
+		Looped = false;
+		PlaybackRegionsEnabled = false;
+		PlaybackSpeed = 1;
+		Playing = false;
+		TimePosition = 0;
+		Volume = 0.5;
+
+		--Regions
+		LoopRegion = NumberRange.new(0, 60000);
+		PlaybackRegion = NumberRange.new(0, 60000);
+
+		--Routing
+		SoundGroup = "nil";
+	};
+	["SoundGroup"] = {
+
+		--Data
+		Archivable = true;
+		Name = "SoundGroup";
+		Parent = "nil";
+
+		--State
+		Volume = 0.5;
+	};
+
+	Part = {
+		Name = "Part";
+		Color = Color3.fromRGB(163, 162, 165);
+		Material = Enum.Material.Plastic;
+		Reflectance = 0;
+		Transparency = 0;
+
+		Size = Vector3.new(4, 1.2, 2);
+		CFrame = CFrame.new();
+
+		CanCollide = true;
+		Anchored = false;
+		Shape = Enum.PartType.Block;
+	};
+
+	Folder = {
+		Name = "Folder";
+	};
+	
+	Model = {
+		Name = "Model";
+	};
+}
+
+function switch(outcome, list)
+	if list["case " .. outcome] then
+		return list["case " .. outcome]()
+	elseif list["default"] then
+		return list["default"]()
+	end
+end
+
+function trimFullName(descendant, object, descendFrom)
+	return string.gsub(descendant:GetFullName(), object:GetFullName(), descendFrom)
+end
+
+function formatString(str)
+	if #str > 0 then
+		local newStr = ""
+		for a = 1, #str do
+			local b = string.sub(str, a, a)
+			if b == "\\" then
+				newStr ..= "\\"
+			end
+			if b == '"' then
+				newStr ..= "\\"
+			end
+			newStr ..= b
+		end
+		return newStr
+	end
+	return str
+end
+
+function convertObjectIntoLua(obj)
+	return switch(typeof(obj), {
+		["case Vector2"] = function()
+			return "Vector2.new(" .. obj.X .. ", " .. obj.Y .. ")"
+		end;
+		["case Vector3"] = function()
+			return "Vector#.new(" .. obj.X .. ", " .. obj.Y .. ", " .. obj.Z .. ")"
+		end;
+		["case Color3"] = function()
+			return "Color3.fromRGB(" .. math.round(obj.R * 255) .. ", " .. math.round(obj.G * 255) .. ", " .. math.round(obj.B * 255) .. ")"
+		end;
+		["case UDim2"] = function()
+			return "UDim2.new(" .. obj.Width.Scale .. ", " .. obj.Width.Offset .. ", " .. obj.Height.Scale .. ", " .. obj.Height.Offset .. ")"
+		end;
+		["case Font"] = function()
+			return 'Font.new("' .. obj.Family .. '", ' .. tostring(obj.Weight) .. ', ' .. tostring(obj.Style) .. ')'
+		end;
+		["case Rect"] = function()
+			return 'Rect.new(' .. obj.Min.X .. ", " .. obj.Min.Y .. ", " .. obj.Max.X .. ", " .. obj.Max.Y .. ')'
+		end;
+		["case UDim"] = function()
+			return "UDim.new(" .. obj.Scale .. ", " .. obj.Offset .. ")"
+		end;
+		["case ColorSequence"] = function()
+			if #obj.Keypoints == 2 then
+				if obj.Keypoints[1].Value == obj.Keypoints[2].Value then
+					return "ColorSequence.new(" .. convertObjectIntoLua(obj.Keypoints[1].Value) .. ")"
+				else
+					return "ColorSequence.new(" .. convertObjectIntoLua(obj.Keypoints[1].Value) .. ", " .. convertObjectIntoLua(obj.Keypoints[2].Value) .. ")"
+				end
+			else
+				local keypoint = {}
+				for _, a in ipairs(obj.Keypoints) do
+					table.insert(keypoint, convertObjectIntoLua(a))
+				end
+				return "ColorSequence.new({" .. table.concat(keypoint, ", ") .. "})"
+			end
+		end;
+		["case ColorSequenceKeypoint"] = function()
+			return "ColorSequenceKeypoint.new(" .. obj.Time .. ", " .. convertObjectIntoLua(obj.Value) .. ")"
+		end;
+		["case NumberRange"] = function()
+			return "NumberRange.new(" .. obj.Min .. ", " .. obj.Max .. ")"
+		end;
+		["case string"] = function()
+			return '"' .. formatString(obj) .. '"'
+		end;
+		["default"] = function()
+			return tostring(obj)
+		end;
+	})
+end
+
+function convert(variable, vlist, obj, isTree)
+	local class = api[obj.ClassName]
+	if class then
+		local class = api[obj.ClassName]
+		for a, b in pairs(class) do
+			if obj[a] ~= b then
+				if typeof(obj[a]) == "Instance" then
+					if vlist[obj[a]] then
+						addLine(variable .. "." .. a .. " = " .. vlist[obj[a]])
+					elseif not (isTree and a == "Parent") then
+						addLine("--LOG: object " .. variable .. " failed to set property " .. a .. " to an object that does not even exist.")
+						warn("--LOG: object " .. variable .. " failed to set property " .. a .. " to an object that does not even exist.")
+					end
+				else
+					addLine(variable .. "." .. a .. " = " .. convertObjectIntoLua(obj[a]))
+				end
+			end
+		end
+	else
+		addLine("--LOG: class " .. obj.ClassName .. " didn't compile.")
+		warn("SGC: class " .. obj.ClassName .. " didn't compile.")
+	end
+end
+
+function convertGUI(gui)
+	local variables = {}
+	local vlist = {}
+	local realName = "_" .. gui.Name
+	while table.find(vlist, realName) do
+		realName = "_" .. realName
+	end
+	variables[gui] = realName
+	table.insert(vlist, realName)
+	for _, a in ipairs(gui:GetDescendants()) do
+		local realName = "_" .. a.Name
+		while table.find(vlist, realName) do
+			realName = "_" .. realName
+		end
+		variables[a] = realName
+		table.insert(vlist, realName)
+	end
+	addLine("")
+	addLine("--##Variables##")
+	for a, b in pairs(variables) do
+		addLine("local " .. b .. ' = Instance.new("' .. a.ClassName .. '")')
+	end
+	addLine("")
+	addLine("--##Properties##")
+	for a, b in pairs(variables) do
+		addLine("")
+		addLine("--" .. b)
+		convert(b, variables, a, a == gui)
+		for c, d in pairs(a:GetAttributes()) do
+			addLine(b .. ':SetAttribute("' .. c .. '", ' .. convertObjectIntoLua(d) .. ')')
+		end
+	end
+end
+
+convertGUI(workspace.Multiplayer)
+setclipboard(code)
