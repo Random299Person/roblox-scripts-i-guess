@@ -876,7 +876,6 @@ local api = {
 
 		CanCollide = true;
 		Anchored = false;
-		Shape = Enum.PartType.Block;
 	};
 
 	Folder = {
