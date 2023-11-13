@@ -5,9 +5,6 @@ function addLine(line)
 	code ..= "\n" .. line
 end
 addLine("--SIMPLE GUI CONVERTER BY R_299P")
-if selectorMethod then
-	addLine("local a, b = nil, {")
-end
 local api = {
 	--Basic UI
 	["ScreenGui"] = {
@@ -1020,12 +1017,18 @@ function convertGUI(gui)
 	end
 	addLine("")
 	addLine("--##Variables##")
+	if selectorMethod then
+		addLine("local a, b = nil, {")
+	end
 	for a, b in pairs(variables) do
 		if selectorMethod then
-			addLine("[\"" .. b .. '"] = Instance.new("' .. a.ClassName .. '");')
+			addLine("	[\"" .. b .. '"] = Instance.new("' .. a.ClassName .. '");')
 		else
 			addLine("local " .. b .. ' = Instance.new("' .. a.ClassName .. '")')
 		end
+	end
+	if selectorMethod then
+		addLine("}")
 	end
 	addLine("")
 	addLine("--##Properties##")
