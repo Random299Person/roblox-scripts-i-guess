@@ -865,7 +865,7 @@ local api = {
 	Folder = {
 		Name = "Folder";
 	};
-	
+
 	Model = {
 		Name = "Model";
 	};
@@ -907,7 +907,10 @@ function convertObjectIntoLua(obj)
 			return "Vector2.new(" .. obj.X .. ", " .. obj.Y .. ")"
 		end;
 		["case Vector3"] = function()
-			return "Vector#.new(" .. obj.X .. ", " .. obj.Y .. ", " .. obj.Z .. ")"
+			return "Vector3.new(" .. obj.X .. ", " .. obj.Y .. ", " .. obj.Z .. ")"
+		end;
+		["case CFrame"] = function()
+			return "CFrame.new(" .. tostring(obj) .. ")"
 		end;
 		["case Color3"] = function()
 			return "Color3.fromRGB(" .. math.round(obj.R * 255) .. ", " .. math.round(obj.G * 255) .. ", " .. math.round(obj.B * 255) .. ")"
