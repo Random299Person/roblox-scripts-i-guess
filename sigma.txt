@@ -1,8 +1,13 @@
+local selectorMethod = true
+
 local code = "--Compiled using SIMPLE GUI COMPILER"
 function addLine(line)
 	code ..= "\n" .. line
 end
 addLine("--SIMPLE GUI CONVERTER BY R_299P")
+if selectorMethod then
+	addLine("local a, b = nil, {")
+end
 local api = {
 	--Basic UI
 	["ScreenGui"] = {
@@ -862,6 +867,21 @@ local api = {
 		Shape = Enum.PartType.Block;
 	};
 
+	WedgePart = {
+		Name = "Wedge";
+		Color = Color3.fromRGB(163, 162, 165);
+		Material = Enum.Material.Plastic;
+		Reflectance = 0;
+		Transparency = 0;
+
+		Size = Vector3.new(4, 1.2, 2);
+		CFrame = CFrame.new();
+
+		CanCollide = true;
+		Anchored = false;
+		Shape = Enum.PartType.Block;
+	};
+
 	Folder = {
 		Name = "Folder";
 	};
@@ -1001,13 +1021,21 @@ function convertGUI(gui)
 	addLine("")
 	addLine("--##Variables##")
 	for a, b in pairs(variables) do
-		addLine("local " .. b .. ' = Instance.new("' .. a.ClassName .. '")')
+		if selectorMethod then
+			addLine("[\"" .. b .. '"] = Instance.new("' .. a.ClassName .. '");')
+		else
+			addLine("local " .. b .. ' = Instance.new("' .. a.ClassName .. '")')
+		end
 	end
 	addLine("")
 	addLine("--##Properties##")
 	for a, b in pairs(variables) do
 		addLine("")
 		addLine("--" .. b)
+		if selectorMethod then
+			addLine("a = " .. "b[" .. b .. "]")
+			b = "a"
+		end
 		convert(b, variables, a, a == gui)
 		for c, d in pairs(a:GetAttributes()) do
 			addLine(b .. ':SetAttribute("' .. c .. '", ' .. convertObjectIntoLua(d) .. ')')
