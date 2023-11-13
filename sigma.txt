@@ -876,6 +876,7 @@ local api = {
 
 		CanCollide = true;
 		Anchored = false;
+		Shape = Enum.PartType.Block;
 	};
 
 	Folder = {
@@ -981,7 +982,11 @@ function convert(variable, vlist, obj, isTree)
 			if obj[a] ~= b then
 				if typeof(obj[a]) == "Instance" then
 					if vlist[obj[a]] then
-						addLine(variable .. "." .. a .. " = " .. vlist[obj[a]])
+						if selectorMethod then
+							addLine(variable .. "." .. a .. " = " .. 'b["' .. vlist[obj[a]] .. '"]')
+						else
+							addLine(variable .. "." .. a .. " = " .. vlist[obj[a]])
+						end
 					elseif not (isTree and a == "Parent") then
 						addLine("--LOG: object " .. variable .. " failed to set property " .. a .. " to an object that does not even exist.")
 						warn("--LOG: object " .. variable .. " failed to set property " .. a .. " to an object that does not even exist.")
@@ -1035,7 +1040,7 @@ function convertGUI(gui)
 		addLine("")
 		addLine("--" .. b)
 		if selectorMethod then
-			addLine("a = " .. "b[" .. b .. "]")
+			addLine("a = " .. 'b["' .. b .. '"]')
 			b = "a"
 		end
 		convert(b, variables, a, a == gui)
