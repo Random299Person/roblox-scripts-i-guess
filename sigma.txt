@@ -851,6 +851,7 @@ local api = {
 
 	Part = {
 		Name = "Part";
+		Parent = "nil";
 		Color = Color3.fromRGB(163, 162, 165);
 		Material = Enum.Material.Plastic;
 		Reflectance = 0;
@@ -866,6 +867,7 @@ local api = {
 
 	WedgePart = {
 		Name = "Wedge";
+		Parent = "nil";
 		Color = Color3.fromRGB(163, 162, 165);
 		Material = Enum.Material.Plastic;
 		Reflectance = 0;
@@ -880,11 +882,15 @@ local api = {
 
 	Folder = {
 		Name = "Folder";
+		Parent = "nil";
 	};
 
 	Model = {
 		Name = "Model";
+		Parent = "nil";
 	};
+
+	TouchTransmitter = false
 }
 
 function switch(outcome, list)
@@ -976,7 +982,6 @@ end
 function convert(variable, vlist, obj, isTree)
 	local class = api[obj.ClassName]
 	if class then
-		local class = api[obj.ClassName]
 		for a, b in pairs(class) do
 			if obj[a] ~= b then
 				if typeof(obj[a]) == "Instance" then
@@ -1011,12 +1016,15 @@ function convertGUI(gui)
 	variables[gui] = realName
 	table.insert(vlist, realName)
 	for _, a in ipairs(gui:GetDescendants()) do
-		local realName = "_" .. a.Name
-		while table.find(vlist, realName) do
-			realName = "_" .. realName
+		local class = api[a.ClassName]
+		if class then
+			local realName = "_" .. a.Name
+			while table.find(vlist, realName) do
+				realName = "_" .. realName
+			end
+			variables[a] = realName
+			table.insert(vlist, realName)
 		end
-		variables[a] = realName
-		table.insert(vlist, realName)
 	end
 	addLine("")
 	addLine("--##Variables##")
